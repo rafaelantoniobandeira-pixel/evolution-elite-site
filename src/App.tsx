@@ -1,14 +1,13 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
-import PainPoints from "./components/PainPoints";
-import Services from "./components/Services";
+import Problem from "./components/Problem";
+import Numbers from "./components/Numbers";
 import Method from "./components/Method";
+import Results from "./components/Results";
 import Testimonials from "./components/Testimonials";
-import LeadForm from "./components/LeadForm";
-import FAQ from "./components/FAQ";
+import About from "./components/About";
+import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
-import WhatsAppButton from "./components/WhatsAppButton";
 import { motion, useScroll, useSpring } from "motion/react";
 
 export default function App() {
@@ -20,10 +19,10 @@ export default function App() {
   });
 
   return (
-    <div className="relative selection:bg-accent-gold selection:text-premium-black">
+    <div className="relative selection:bg-lime-electric selection:text-heavy-black">
       {/* Scroll Progress Indicator */}
       <motion.div 
-        className="fixed top-0 left-0 right-0 h-1 bg-accent-gold z-[100] origin-left"
+        className="fixed top-0 left-0 right-0 h-1 bg-lime-electric z-[100] origin-left"
         style={{ scaleX }}
       />
       
@@ -31,21 +30,16 @@ export default function App() {
       
       <main>
         <Hero />
-        
-        {/* Subtle transition divider */}
-        <div className="h-px w-full bg-gradient-to-r from-transparent via-premium-black/5 to-transparent" />
-        
-        <About />
-        <PainPoints />
-        <Services />
+        <Problem />
+        <Numbers />
         <Method />
+        <Results />
         <Testimonials />
-        <LeadForm />
-        <FAQ />
+        <About />
+        <FinalCTA />
       </main>
       
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 }

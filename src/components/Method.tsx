@@ -3,60 +3,50 @@ import { motion } from "motion/react";
 const steps = [
   {
     num: "01",
-    title: "Diagnóstico de Fluxo",
-    desc: "Mapeamos seus padrões de comportamento e identificamos os gargalos de performance."
+    title: "Avaliação completa do seu corpo e rotina",
+    desc: "Não fazemos nada no escuro. Analisamos seu percentual de gordura, força e rotina diária para criar a estratégia perfeita."
   },
   {
     num: "02",
-    title: "Reprogramação Mental",
-    desc: "Substituímos crenças limitantes por modelos de pensamento de alta eficiência."
+    title: "Treino 100% personalizado pra você",
+    desc: "Cada exercício tem um porquê. Construímos o seu cronograma focado no seu objetivo: seja emagrecer ou ganhar massa."
   },
   {
     num: "03",
-    title: "Design de Estratégia",
-    desc: "Criamos o plano tático personalizado para atingir seus grandes objetivos."
-  },
-  {
-    num: "04",
-    title: "Execução Blindada",
-    desc: "Acompanhamento intensivo para garantir que a estratégia seja aplicada no dia a dia."
-  },
-  {
-    num: "05",
-    title: "Otimização Contínua",
-    desc: "Ajustes finos para manter resultados constantes e sustentáveis a longo prazo."
+    title: "Acompanhamento semanal até o resultado",
+    desc: "O plano é vivo. Ajustamos sua dieta e seu treino toda semana para garantir que você nunca chegue num platô."
   }
 ];
 
 export default function Method() {
   return (
-    <section id="metodologia" className="py-24 bg-premium-black relative overflow-hidden border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-20">
-          <span className="text-accent-gold font-bold text-xs tracking-[4px] uppercase mb-4 block">Processo Validado</span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 font-serif">
-            O Método <span className="italic text-accent-gold underline decoration-white/20 underline-offset-8">Evolução Estratégica™</span>
-          </h2>
-          <p className="max-w-2xl mx-auto text-text-secondary text-lg font-light">
-            Uma abordagem sistêmica que une neurociência, gestão estratégica e desenvolvimento humano.
-          </p>
+    <section id="metodologia" className="py-24 bg-white overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-6">
+        <div className="mb-20">
+          <h2 className="text-6xl md:text-8xl tracking-tighter">COMO FUNCIONA.</h2>
         </div>
-        
-        <div className="flex flex-col gap-6 max-w-4xl mx-auto">
+
+        <div className="grid lg:grid-cols-3 gap-16 relative">
+          {/* Vertical Line for asymmetry */}
+          <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-1 bg-heavy-black/5" />
+
           {steps.map((step, index) => (
             <motion.div
-              key={step.num}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="flex items-center gap-8 p-8 rounded-xl glass-card group hover:border-accent-gold/50 transition-all duration-500"
+              key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className="relative pt-12 group"
             >
-              <div className="w-16 h-16 rounded-full border border-accent-border flex items-center justify-center text-2xl font-serif font-bold text-accent-gold group-hover:bg-accent-gold group-hover:text-black transition-all shrink-0">
+              <div className="absolute top-0 left-0 font-display text-[10rem] leading-none text-heavy-black/5 group-hover:text-lime-electric/20 transition-all duration-500">
                 {step.num}
               </div>
-              <div>
-                <h4 className="text-xl font-bold text-white mb-2 font-serif underline decoration-accent-gold/20 underline-offset-4">{step.title}</h4>
-                <p className="text-sm text-text-secondary leading-relaxed font-light">
+              <div className="relative z-10">
+                <h3 className="text-3xl mb-6 font-display group-hover:translate-x-2 transition-transform duration-300">
+                   {step.title}
+                </h3>
+                <p className="text-gray-600 font-sans leading-relaxed">
                   {step.desc}
                 </p>
               </div>

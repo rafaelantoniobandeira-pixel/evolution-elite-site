@@ -1,116 +1,65 @@
 import { motion } from "motion/react";
-import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Ana Silveira",
-    role: "CEO na TechNova",
-    text: "A mentoria mudou completamente minha forma de liderar. Passei de uma gestora ansiosa para uma líder estratégica com clareza total.",
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop"
+    name: "Bruno Oliveira",
+    goal: "Emagrecimento",
+    text: "Pensei que nunca ia conseguir perder a barriga que me incomodava há anos. Com o método do Rafael, perdi 10kg em 2 meses sem sofrer.",
+    img: "/han-wei-sheng-5Lp7PJONCFw-unsplash.jpg"
   },
   {
-    name: "Ricardo Mendes",
-    role: "Diretor Comercial",
-    text: "Minha performance dobrou em apenas 3 meses. O método é direto ao ponto e focado em resultados reais que você vê no dia a dia.",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop"
+    name: "Camila Santos",
+    goal: "Definição",
+    text: "O acompanhamento semanal faz toda a diferença. O Rafael não te deixa desistir e os treinos são intensos e eficientes.",
+    img: "/julia-rekamie-Z72YujnOrlY-unsplash.jpg"
   },
   {
-    name: "Juliana Castro",
-    role: "Empreendedora",
-    text: "Encontrei o equilíbrio que faltava entre minha empresa e minha família. Hoje sou mais produtiva e muito mais presente.",
-    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"
+    name: "Gabriel Ramos",
+    goal: "Hipertrofia",
+    text: "Volume de treino e dieta ajustados perfeitamente. Ganhei 5kg de massa magra e minha força explodiu em pouco tempo.",
+    img: "/artam-hoomat-wMcDTlmiim0-unsplash.jpg"
   }
-];
-
-const stats = [
-  { label: "Mentorados", value: "+500" },
-  { label: "Anos de Experiência", value: "+10" },
-  { label: "Satisfação", value: "98%" },
-  { label: "Projetos Realizados", value: "+1.2k" },
 ];
 
 export default function Testimonials() {
   return (
-    <section id="resultados" className="py-24 bg-premium-black overflow-hidden border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-3 gap-16 items-center mb-20">
-          <div className="lg:col-span-1">
-            <span className="text-accent-gold font-bold text-xs tracking-[4px] uppercase mb-4 block">Prova Social</span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 font-serif">
-              A Prova da <span className="italic text-accent-gold underline decoration-white/20 underline-offset-8">Transformação.</span>
-            </h2>
-            <p className="text-text-secondary mb-8 leading-relaxed font-light">
-              Não são apenas palavras, são trajetórias reais de pessoas que decidiram não aceitar nada menos que a excelência.
-            </p>
-            <div className="flex items-center gap-4">
-              <div className="flex -space-x-4">
-                {[
-                  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop",
-                  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop",
-                  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop",
-                  "https://images.unsplash.com/photo-1552058544-f2b08422138a?q=80&w=100&auto=format&fit=crop"
-                ].map((url, i) => (
-                  <img key={i} src={url} className="w-12 h-12 rounded-full border border-white/10 object-cover grayscale" />
-                ))}
+    <section id="depoimentos" className="py-24 bg-white overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-6">
+        <div className="grid lg:grid-cols-3 gap-12">
+          {testimonials.map((test, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className="p-10 bg-light-gray relative group border-2 border-transparent hover:border-heavy-black transition-all duration-300 flex flex-col justify-between"
+            >
+              <div className="absolute -top-10 -left-4 font-display text-[15rem] leading-none text-lime-electric opacity-40 select-none">
+                “
               </div>
-              <div className="text-sm">
-                <div className="flex text-accent-gold gap-0.5">
-                  {[1, 2, 3, 4, 5].map(i => <Star key={i} size={14} fill="currentColor" />)}
+              <div className="relative z-10 pt-16">
+                <p className="text-xl md:text-2xl text-heavy-black font-sans italic mb-8 relative leading-relaxed">
+                  {test.text}
+                </p>
+              </div>
+              <div className="relative z-10 flex items-center gap-4 border-t border-heavy-black/10 pt-6">
+                <img 
+                  src={test.img} 
+                  alt={test.name}
+                  className="w-16 h-16 rounded-full object-cover border-2 border-heavy-black grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+                <div>
+                  <h4 className="text-3xl font-display text-heavy-black">{test.name}</h4>
+                  <span className="text-heavy-black font-display text-lg tracking-[0.2em] opacity-40 uppercase">
+                    OBJETIVO: {test.goal}
+                  </span>
                 </div>
-                <p className="font-bold text-white text-[11px] uppercase tracking-widest mt-1">4.9/5 Avaliação média</p>
               </div>
-            </div>
-          </div>
-          
-          <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
-            <div className="space-y-6">
-              {testimonials.slice(0, 2).map((test, index) => (
-                <TestimonialCard key={index} {...test} />
-              ))}
-            </div>
-            <div className="space-y-6 pt-12">
-              {testimonials.slice(2).map((test, index) => (
-                <TestimonialCard key={index} {...test} />
-              ))}
-              <div className="glass-card p-10 rounded-xl shadow-xl border-accent-border/30">
-                <p className="text-accent-gold font-bold mb-2 text-xs uppercase tracking-widest">Próxima Parada:</p>
-                <h4 className="text-xl font-bold mb-4 font-serif text-white">Sua história de sucesso começa aqui.</h4>
-                <a href="#contato" className="text-[11px] uppercase tracking-widest font-bold underline underline-offset-8 text-white hover:text-accent-gold transition-colors">Agendar minha sessão</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 border-t border-white/5 pt-16">
-          {stats.map((stat, i) => (
-            <div key={i} className="text-center p-8 bg-white/5 rounded-lg border-l-2 border-accent-gold">
-              <div className="text-4xl lg:text-5xl font-bold font-serif text-accent-gold mb-2">{stat.value}</div>
-              <div className="text-[10px] uppercase tracking-[2px] font-bold text-text-secondary">{stat.label}</div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
-  );
-}
-
-function TestimonialCard({ name, role, text, img }: any) {
-  return (
-    <motion.div 
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      className="glass-card p-8 rounded-xl shadow-sm hover:border-accent-gold/40 transition-all flex flex-col gap-6"
-    >
-      <Quote className="text-accent-gold opacity-30" size={32} />
-      <p className="text-text-secondary leading-relaxed italic font-light text-sm">"{text}"</p>
-      <div className="flex items-center gap-4 border-t border-white/5 pt-6">
-        <img src={img} alt={name} className="w-12 h-12 rounded-full object-cover grayscale" />
-        <div>
-          <h5 className="font-bold text-white text-xs uppercase tracking-widest">{name}</h5>
-          <p className="text-[10px] text-accent-gold italic tracking-tighter uppercase mt-0.5">{role}</p>
-        </div>
-      </div>
-    </motion.div>
   );
 }
