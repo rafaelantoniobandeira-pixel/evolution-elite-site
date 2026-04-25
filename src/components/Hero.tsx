@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
+import heroImg from "../ato-aikins-tBVzBwKpROI-unsplash.jpg";
 
 export default function Hero() {
   const words = ["CHEGA", "DE COMEÇAR", "E DESISTIR."];
@@ -63,7 +64,7 @@ export default function Hero() {
               <p className="text-white font-display text-2xl tracking-widest">ESTRATÉGIA & FORÇA</p>
             </div>
             <img 
-              src="/src/ato-aikins-tBVzBwKpROI-unsplash.jpg" 
+              src={heroImg} 
               alt="Rafael Costa Training"
               className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-multiply"
               referrerPolicy="no-referrer"

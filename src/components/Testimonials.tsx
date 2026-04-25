@@ -1,23 +1,26 @@
 import { motion } from "motion/react";
+import testimonial1 from "../han-wei-sheng-5Lp7PJONCFw-unsplash.jpg";
+import testimonial2 from "../julia-rekamie-Z72YujnOrlY-unsplash.jpg";
+import testimonial3 from "../artam-hoomat-wMcDTlmiim0-unsplash.jpg";
 
 const testimonials = [
   {
     name: "Bruno Oliveira",
     goal: "Emagrecimento",
     text: "Pensei que nunca ia conseguir perder a barriga que me incomodava há anos. Com o método do Rafael, perdi 10kg em 2 meses sem sofrer.",
-    img: "/src/han-wei-sheng-5Lp7PJONCFw-unsplash.jpg"
+    img: testimonial1
   },
   {
     name: "Camila Santos",
     goal: "Definição",
     text: "O acompanhamento semanal faz toda a diferença. O Rafael não te deixa desistir e os treinos são intensos e eficientes.",
-    img: "/src/julia-rekamie-Z72YujnOrlY-unsplash.jpg"
+    img: testimonial2
   },
   {
     name: "Gabriel Ramos",
     goal: "Hipertrofia",
     text: "Volume de treino e dieta ajustados perfeitamente. Ganhei 5kg de massa magra e minha força explodiu em pouco tempo.",
-    img: "/src/artam-hoomat-wMcDTlmiim0-unsplash.jpg"
+    img: testimonial3
   }
 ];
 

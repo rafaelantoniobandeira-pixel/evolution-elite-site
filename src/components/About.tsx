@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Zap, Target, ShieldCheck } from "lucide-react";
+import aboutImg from "../han-wei-sheng-5Lp7PJONCFw-unsplash.jpg";
 
 export default function About() {
   return (
@@ -15,7 +16,7 @@ export default function About() {
           >
             <div className="relative z-10 border-4 border-lime-electric p-2">
               <img 
-                src="/src/han-wei-sheng-5Lp7PJONCFw-unsplash.jpg" 
+                src={aboutImg} 
                 alt="Rafael Costa Personal Trainer"
                 className="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
