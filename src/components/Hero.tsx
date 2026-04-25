@@ -1,9 +1,9 @@
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
-import heroImg from "../ato-aikins-tBVzBwKpROI-unsplash.jpg";
 
 export default function Hero() {
   const words = ["CHEGA", "DE COMEÇAR", "E DESISTIR."];
+  const heroImg = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80";
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 hero-gradient overflow-hidden">

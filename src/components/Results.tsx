@@ -1,29 +1,25 @@
 import { motion } from "motion/react";
-import res1 from "../artam-hoomat-wMcDTlmiim0-unsplash.jpg";
-import res2 from "../julia-rekamie-Z72YujnOrlY-unsplash.jpg";
-import res3 from "../samuel-girven-Ppua0I4VjqE-unsplash.jpg";
-import res4 from "../ato-aikins-tBVzBwKpROI-unsplash.jpg";
 
 const results = [
   {
     name: "Carlos Eduardo",
     result: "−12kg em 3 meses",
-    img: res1
+    img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80"
   },
   {
     name: "Mariana Silva",
     result: "Ganhou 4kg de massa",
-    img: res2
+    img: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80"
   },
   {
     name: "Felipe Mendes",
     result: "Definição Abdominal",
-    img: res3
+    img: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=80"
   },
   {
     name: "Leticia Rocha",
     result: "Recuperação de Postura",
-    img: res4
+    img: "https://images.unsplash.com/photo-1581009146145-b5ef03a74e7b?w=800&q=80"
   }
 ];
 

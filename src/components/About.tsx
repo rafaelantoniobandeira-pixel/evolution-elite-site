@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
 import { Zap, Target, ShieldCheck } from "lucide-react";
-import aboutImg from "../han-wei-sheng-5Lp7PJONCFw-unsplash.jpg";
 
 export default function About() {
+  const aboutImg = "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1000&q=80";
   return (
     <section id="sobre" className="py-24 bg-heavy-black text-white overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6">
