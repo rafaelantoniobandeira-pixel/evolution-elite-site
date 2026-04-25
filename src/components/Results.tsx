@@ -4,22 +4,22 @@ const results = [
   {
     name: "Carlos Eduardo",
     result: "−12kg em 3 meses",
-    img: "/artam-hoomat-wMcDTlmiim0-unsplash.jpg"
+    img: "/src/artam-hoomat-wMcDTlmiim0-unsplash.jpg"
   },
   {
     name: "Mariana Silva",
     result: "Ganhou 4kg de massa",
-    img: "/julia-rekamie-Z72YujnOrlY-unsplash.jpg"
+    img: "/src/julia-rekamie-Z72YujnOrlY-unsplash.jpg"
   },
   {
     name: "Felipe Mendes",
     result: "Definição Abdominal",
-    img: "/samuel-girven-Ppua0I4VjqE-unsplash.jpg"
+    img: "/src/samuel-girven-Ppua0I4VjqE-unsplash.jpg"
   },
   {
     name: "Leticia Rocha",
     result: "Recuperação de Postura",
-    img: "/ato-aikins-tBVzBwKpROI-unsplash.jpg"
+    img: "/src/ato-aikins-tBVzBwKpROI-unsplash.jpg"
   }
 ];
 

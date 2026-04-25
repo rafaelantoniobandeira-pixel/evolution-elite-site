@@ -63,7 +63,7 @@ export default function Hero() {
               <p className="text-white font-display text-2xl tracking-widest">ESTRATÉGIA & FORÇA</p>
             </div>
             <img 
-              src="/ato-aikins-tBVzBwKpROI-unsplash.jpg" 
+              src="/src/ato-aikins-tBVzBwKpROI-unsplash.jpg" 
               alt="Rafael Costa Training"
               className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-multiply"
               referrerPolicy="no-referrer"
